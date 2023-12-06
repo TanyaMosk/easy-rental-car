@@ -2,6 +2,7 @@
   "name": "easy-rental-car",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://TanyaMosk.github.io/easy-rental-car/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
