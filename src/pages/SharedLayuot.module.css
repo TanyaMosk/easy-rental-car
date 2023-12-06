@@ -1,0 +1,12 @@
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.wrapperLink{
+    display: flex;
+    gap: 25px;
+}
