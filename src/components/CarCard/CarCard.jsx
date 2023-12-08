@@ -23,22 +23,36 @@ class CarCard extends Component {
     return (
       <>
         <div className={styled.carsCatalog}>
-          <div>
+          <div className={styled.carsWrapper}>
             {adverts.map((advert) => (
-              <ul key={advert.id}>
+              <ul key={advert.id} className={styled.carsList}>
                 <img
                   className={styled.image}
-                  src={advert.img}
+                  src={
+                    advert.img
+                      ? advert.img
+                      : `https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg`
+                  }
                   alt={`${advert.make} ${advert.model}`}
                 />
-                <h2>
-                  {advert.make} {advert.model}, {advert.year}
-                </h2>
-                <li>{advert.rentalPrice}</li>
-                <li>{advert.type}</li>
-                <li>{advert.functionalities}</li>
-                <li>{advert.rentalCompany}</li>
-                <li>{advert.address}</li>
+                <div className={styled.carsTitleWrapper}>
+                  <h3 className={styled.carsTitle}>
+                    {advert.make} {advert.model}, {advert.year}
+                  </h3>
+                  <h3 className={styled.carsTitle}>{advert.rentalPrice}</h3>
+                </div>
+                <div className={styled.carsItemWrapper}>
+                  <li className={styled.carsItem}>{advert.address}</li>
+
+                  <li className={styled.carsItem}>{advert.rentalCompany}</li>
+                  <li className={styled.carsItem}>{advert.type}</li>
+                  <li className={styled.carsItem}>{advert.model}</li>
+                  <li className={styled.carsItem}>{advert.id}</li>
+
+                  <li className={styled.carsItem}>
+                    {advert.functionalities[0]}
+                  </li>
+                </div>
                 <button type="button" onClick={() => this.openModal(advert)}>
                   Learn more
                 </button>

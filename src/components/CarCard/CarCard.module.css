@@ -1,6 +1,50 @@
-.image{
-  width: 320px;
+.image {
+  width: 270px;
   height: 200px;
+  border-radius: 10px;
   /* object-position: -80px 0px; */
   /* object-fit: cover; */
+}
+
+.carsCatalog {
+  margin: auto;
+  width: 1184px;
+}
+.carsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 29px;
+}
+
+.carsList {
+  margin: 0;
+  padding: 0;
+  width: 270px;
+  list-style: none;
+}
+.carsTitleWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carsTitle {
+  color: #121417;
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.carsItemWrapper {
+  /* display: flex; */
+}
+
+.carsItem {
+  color: rgba(18, 20, 23, 0.5);
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
 }
