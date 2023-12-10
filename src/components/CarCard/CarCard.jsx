@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { addToFavorites, removeFromFavorites } from "../../redux/advertsSlice";
 import { favoritesSelector } from "../../redux/selectord";
 import { CiHeart } from "react-icons/ci";
-import { FaHeart } from "react-icons/fa";
 import { IoMdHeart } from "react-icons/io";
 
 const CarCard = ({ adverts }) => {
