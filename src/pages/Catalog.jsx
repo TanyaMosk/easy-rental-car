@@ -8,6 +8,7 @@ import { fetchCars } from "../redux/operations";
 import styled from "./Catalog.module.css";
 import { advertsSelector } from "../redux/selectord";
 import { resetAdverts } from "../redux/advertsSlice";
+import Dropdown from "../components/Dropdown/Dropdown";
 
 export const Catalog = () => {
   const { adverts } = useSelector(advertsSelector);
@@ -36,6 +37,7 @@ export const Catalog = () => {
   return (
     <main>
       <section className={styled.catalogSection}>
+        <Dropdown />
         <CarCard adverts={adverts} />
         <Pagination loadMore={handleLoadMore} />
       </section>

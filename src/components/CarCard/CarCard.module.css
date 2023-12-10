@@ -1,3 +1,11 @@
+.imageWrapper {
+  /* position: relative; */
+  width: 270px;
+  height: 200px;
+  background-color: gainsboro;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
 .image {
   width: 270px;
   height: 200px;
@@ -6,14 +14,34 @@
   /* object-fit: cover; */
 }
 
+.favoritesButton {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 240px;
+  right: auto;
+  bottom: auto;
+  background-color: transparent;
+  border: none;
+}
+
+.heardActive {
+  fill: #ffffff;
+}
+
+.heard {
+  fill: #3470ff;
+}
+
 .carsCatalog {
   margin: auto;
   width: 1184px;
 }
+
 .carsWrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 29px;
+  /* position: relative; */
 }
 
 .carsList {
@@ -22,6 +50,7 @@
   width: 270px;
   list-style: none;
 }
+
 .carsTitleWrapper {
   display: flex;
   justify-content: space-between;

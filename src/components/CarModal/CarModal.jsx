@@ -1,5 +1,6 @@
 import Modal from "react-modal";
 import styled from "./CarModal.module.css";
+import { IoMdClose } from "react-icons/io";
 
 const customStyles = {
   content: {
@@ -26,8 +27,12 @@ const CarModal = ({ isModalOpen, onClose, selectedAdvert }) => {
       <div>
         <div>
           <div className={styled.modalWrapper}>
-            <button type="button" onClick={onClose}>
-              Close
+            <button
+              className={styled.closeButton}
+              type="button"
+              onClick={onClose}
+            >
+              <IoMdClose />
             </button>
             <div>
               <div key={selectedAdvert.id}>
