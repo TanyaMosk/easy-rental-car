@@ -1,3 +1,9 @@
 // import { createSelector } from "@reduxjs/toolkit";
 
-// export const advertsCar = (state) => state.adverts;
+export const advertsSelector = (state) => state.adverts;
+
+export const isLoadingSelector = (state) => state.isLoading;
+
+export const errorSelector = (state) => state.error;
+
+export const favoritesSelector = (state) => state.adverts.favorites;
