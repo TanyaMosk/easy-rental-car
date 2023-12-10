@@ -33,7 +33,6 @@ const FavoritesCar = () => {
     }
   };
 
-  console.log(favorites);
   return (
     <>
       <div className={styled.carsCatalog}>
@@ -63,7 +62,9 @@ const FavoritesCar = () => {
 
               <div className={styled.carsTitleWrapper}>
                 <h3 className={styled.carsTitle}>
-                  {advert.make} {advert.model}, {advert.year}
+                  {advert.make}
+                  <span className={styled.carsTitleSecond}>{advert.model}</span>
+                  , {advert.year}
                 </h3>
                 <h3 className={styled.carsTitle}>{advert.rentalPrice}</h3>
               </div>
@@ -75,7 +76,11 @@ const FavoritesCar = () => {
                 <li className={styled.carsItem}>{advert.id}</li>
                 <li className={styled.carsItem}>{advert.functionalities[0]}</li>
               </div>
-              <button type="button" onClick={() => openModal(advert)}>
+              <button
+                className={styled.buttonLearn}
+                type="button"
+                onClick={() => openModal(advert)}
+              >
                 Learn more
               </button>
             </ul>

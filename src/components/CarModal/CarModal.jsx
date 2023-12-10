@@ -8,9 +8,10 @@ const customStyles = {
     left: "50%",
     right: "auto",
     bottom: "auto",
+    borderRadius: "24px",
     marginRight: "-20%",
     transform: "translate(-50%, -50%)",
-    padding: "0",
+    padding: "40px 37px",
   },
 };
 
@@ -24,77 +25,112 @@ const CarModal = ({ isModalOpen, onClose, selectedAdvert }) => {
       style={customStyles}
       contentLabel="onRequestClose Example"
     >
-      <div>
-        <div>
+      <>
+        <div className={styled.containerCarModalWrapper}>
           <div className={styled.modalWrapper}>
             <button
               className={styled.closeButton}
               type="button"
               onClick={onClose}
             >
-              <IoMdClose />
+              <IoMdClose className={styled.closeIcon} />
             </button>
             <div>
               <div key={selectedAdvert.id}>
-                <img
-                  className={styled.imageCar}
-                  src={selectedAdvert.img}
-                  alt={`${selectedAdvert.make} ${selectedAdvert.model}`}
-                />
-                <h2>
-                  {selectedAdvert.make} {selectedAdvert.model} ,
-                  {selectedAdvert.year}
+                <div className={styled.carModalImageWrapper}>
+                  <img
+                    className={styled.imageCar}
+                    src={selectedAdvert.img}
+                    alt={`${selectedAdvert.make} ${selectedAdvert.model}`}
+                  />
+                </div>
+                <h2 className={styled.carsModalTitle}>
+                  {selectedAdvert.make}
+                  <span className={styled.carsTitleSecond}>
+                    {selectedAdvert.model}
+                  </span>
+                  ,{selectedAdvert.year}
                 </h2>
                 <ul className={styled.firstItemsWrapper}>
                   <li className={styled.firstItems}>
                     {selectedAdvert.address}
                   </li>
-                  <li>|</li>
-                  <li className={styled.firstItems}>Id: {selectedAdvert.id}</li>
-                  <li>|</li>
+                  <span className={styled.firstItems}>|</span>
+                  <li className={styled.firstItems}>
+                    Id: {selectedAdvert.id}{" "}
+                    <span className={styled.firstItems}>|</span>
+                  </li>
+
                   <li className={styled.firstItems}>
                     Year: {selectedAdvert.year}
+                    <span className={styled.firstItems}>|</span>
                   </li>
-                  <li>|</li>
+
                   <li className={styled.firstItems}>
                     Type: {selectedAdvert.type}
+                    <span className={styled.firstItems}>|</span>
                   </li>
-                  <li>|</li>
+
                   <li className={styled.firstItems}>
                     Fuel consumption: {selectedAdvert.fuelConsumption}
+                    <span className={styled.firstItems}>|</span>
                   </li>
-                  <li>|</li>
+
                   <li className={styled.firstItems}>
                     Engine size: {selectedAdvert.engineSize}
                   </li>
                 </ul>
-                <h4>{selectedAdvert.description}</h4>
-                <li>{selectedAdvert.accessories}</li>
-                <li>{selectedAdvert.functionalities}</li>
+                <h4 className={styled.titleDescriptionOne}>
+                  {selectedAdvert.description}
+                </h4>
+                <h4 className={styled.titleDescription}>
+                  Accessories and functionalities:
+                </h4>
+                <ul>
+                  <li className={styled.firstItems}>
+                    {selectedAdvert.accessories}
+                  </li>
+                  <li className={styled.firstItems}>
+                    {selectedAdvert.functionalities}
+                  </li>
+                </ul>
                 <div className={styled.rentalConditionsWrapper}>
-                  <h4>Rental Conditions:</h4>
+                  <h4 className={styled.titleDescription}>
+                    Rental Conditions:
+                  </h4>
                   <ul className={styled.rentalConditionsItemsWrapper}>
-                    <li>
-                      Minimum age: <p>25</p>
+                    <li className={styled.rentalItem}>
+                      Minimum age:{" "}
+                      <span className={styled.rentalItemSecond}>25</span>
                     </li>
-                    <li>Valid driver’s license</li>
-                    <li>Security deposite require</li>
+                    <li className={styled.rentalItem}>
+                      Valid driver’s license
+                    </li>
+                    <li className={styled.rentalItem}>
+                      Security deposite require
+                    </li>
                   </ul>
                   <ul className={styled.rentalItems}>
                     <li className={styled.rentalItem}>
-                      Mileage: <p>5,858</p>
+                      Mileage:{" "}
+                      <span className={styled.rentalItemSecond}>5,858</span>
                     </li>
                     <li className={styled.rentalItem}>
-                      Price: <p>{selectedAdvert.rentalPrice}</p>
+                      Price:{" "}
+                      <span className={styled.rentalItemSecond}>
+                        {selectedAdvert.rentalPrice}
+                      </span>
                     </li>
                   </ul>
                 </div>
               </div>
-              <a href="tel:+380730000000">Rent car</a>
+              <a className={styled.buttonRend} href="tel:+380730000000">
+                Rent car
+              </a>
             </div>
           </div>
         </div>
-      </div>
+      </>
     </Modal>
   );
 };

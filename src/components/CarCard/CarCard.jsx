@@ -55,9 +55,6 @@ const CarCard = ({ adverts }) => {
                     ) : (
                       <CiHeart className={styled.heardActive} />
                     )}
-                    {/* <FaHeart
-                      className={isFavorite ? styled.heardActive : styled.heard}
-                    /> */}
                   </div>
                 </button>
                 <div className={styled.imageWrapper}>
@@ -74,7 +71,11 @@ const CarCard = ({ adverts }) => {
 
                 <div className={styled.carsTitleWrapper}>
                   <h3 className={styled.carsTitle}>
-                    {advert.make} {advert.model}, {advert.year}
+                    {advert.make}{" "}
+                    <span className={styled.carsTitleSecond}>
+                      {advert.model}
+                    </span>
+                    , {advert.year}
                   </h3>
                   <h3 className={styled.carsTitle}>{advert.rentalPrice}</h3>
                 </div>
@@ -88,7 +89,11 @@ const CarCard = ({ adverts }) => {
                     {advert.functionalities[0]}
                   </li>
                 </div>
-                <button type="button" onClick={() => openModal(advert)}>
+                <button
+                  className={styled.buttonLearn}
+                  type="button"
+                  onClick={() => openModal(advert)}
+                >
                   Learn more
                 </button>
               </ul>

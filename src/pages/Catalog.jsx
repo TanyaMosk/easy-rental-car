@@ -6,12 +6,13 @@ import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { fetchCars } from "../redux/operations";
 import styled from "./Catalog.module.css";
-import { advertsSelector } from "../redux/selectord";
+import { advertsSelector, isLoadingSelector } from "../redux/selectord";
 import { resetAdverts } from "../redux/advertsSlice";
 import Dropdown from "../components/Dropdown/Dropdown";
 
 export const Catalog = () => {
   const { adverts } = useSelector(advertsSelector);
+  const isLoading = useSelector(isLoadingSelector);
   const [searchParams, setSearchParams] = useSearchParams();
   // const [currentPage, setCurrentPage] = useState(1);
   const page = searchParams.get("page") ?? 1;
@@ -22,7 +23,6 @@ export const Catalog = () => {
     dispatch(resetAdverts());
   }, [dispatch]);
 
-  console.log(page);
   useEffect(() => {
     dispatch(fetchCars(page));
   }, [dispatch, page]);
@@ -31,15 +31,20 @@ export const Catalog = () => {
     const nextPage = Number(page) + 1;
     setSearchParams({ page: nextPage });
     // setCurrentPage(nextPage);
-    console.log(page);
   };
 
   return (
     <main>
       <section className={styled.catalogSection}>
         <Dropdown />
-        <CarCard adverts={adverts} />
-        <Pagination loadMore={handleLoadMore} />
+        {isLoading ? (
+          <div>...Loading</div>
+        ) : (
+          <>
+            <CarCard adverts={adverts} />
+            {adverts.length && <Pagination loadMore={handleLoadMore} />}
+          </>
+        )}
       </section>
     </main>
   );

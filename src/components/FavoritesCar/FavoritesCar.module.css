@@ -65,6 +65,15 @@
   line-height: 24px;
 }
 
+.carsTitleSecond {
+  color: #3470ff;
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
 .carsItemWrapper {
   /* display: flex; */
 }
@@ -76,4 +85,26 @@
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
+}
+
+.buttonLearn {
+  display: flex;
+  width: 274px;
+  height: 44px;
+  padding: 12px 99px;
+  margin-top: 28px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background-color: #3470ff;
+  border: none;
+  color: #ffffff;
+}
+
+.buttonLearn:focus {
+  background-color: #0b44cd;
+}
+.buttonLearn:hover {
+  background-color: #0b44cd;
 }

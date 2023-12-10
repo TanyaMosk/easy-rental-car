@@ -2,7 +2,7 @@
 
 export const advertsSelector = (state) => state.adverts;
 
-export const isLoadingSelector = (state) => state.isLoading;
+export const isLoadingSelector = (state) => state.adverts.isLoading;
 
 export const errorSelector = (state) => state.error;
 

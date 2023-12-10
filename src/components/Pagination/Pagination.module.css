@@ -1,0 +1,27 @@
+.buttonLoadMoreWrapper {
+  display: flex;
+  padding: 100px;
+}
+
+.buttonLoadMore {
+  background-color: transparent;
+  border: none;
+  color: #3470ff;
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  text-decoration-line: underline;
+  text-decoration: none;
+  margin: auto;
+  border: none;
+}
+
+.buttonLoadMore:hover {
+  color: #0b44cd;
+}
+
+.buttonLoadMore:focus {
+  color: #0b44cd;
+}

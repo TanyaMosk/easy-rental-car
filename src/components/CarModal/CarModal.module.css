@@ -1,42 +1,140 @@
-.modalWrapper {
-  width: 541px;
-  height: 752px;
-  padding: 20px;
+.containerCarModalWrapper {
+  width: 467px;
+  min-height: 672px;
+  background-color: #fff;
+}
+
+.carModalImageWrapper {
+  background-color: gainsboro;
+  border-radius: 12px;
+  width: 466px;
+  height: 314px;
 }
 
 .imageCar {
-  width: 460px;
+  width: 100%;
   height: 314px;
+  border-radius: 12px;
+  object-fit: cover;
 }
 .firstItemsWrapper {
   display: flex;
   flex-wrap: wrap;
-  /* gap: 20px; */
+  margin: 0;
+  width: 340px;
+  gap: 4px 6px;
 }
 
 .closeButton {
   background-color: transparent;
   border: none;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
   /* margin-left: 240px; */
   /* margin-right: 20px; */
+}
+.closeIcon {
+  width: 1.5em;
+  height: 1.5em;
 }
 
 .firstItems {
   /* border-right: 1px solid black; */
+  color: rgba(18, 20, 23, 0.5);
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
 }
 
 .rentalConditionsItemsWrapper {
   display: flex;
   flex-wrap: wrap;
-  /* gap: 20px; */
+  gap: 8px;
   /* margin: 0; */
 }
 .rentalItems {
   display: flex;
   flex-wrap: wrap;
+  gap: 8px;
 }
 .rentalItem {
   display: flex;
   flex-wrap: wrap;
   justify-self: center;
+  color: #363535;
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  padding: 7px 14px;
+}
+.rentalItemSecond {
+  color: #3470ff;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: -0.24px;
+}
+
+.carsModalTitle {
+  color: #121417;
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 133.333% */
+}
+
+.carsTitleSecond {
+  color: #3470ff;
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+.titleDescriptionOne {
+  color: #121417;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 14px;
+}
+
+.titleDescription {
+  color: #121417;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.buttonRend {
+  display: inline-flex;
+  padding: 12px 50px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: #3470ff;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.buttonRend:focus {
+  background-color: #0b44cd;
+}
+.buttonRend:hover {
+  background-color: #0b44cd;
 }

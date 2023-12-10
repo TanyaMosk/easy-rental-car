@@ -1,9 +1,12 @@
+import Dropdown from "../components/Dropdown/Dropdown";
 import FavoritesCar from "../components/FavoritesCar/FavoritesCar";
+import styled from "./Favorites.module.css";
 
 export const Favorites = () => {
   return (
-    <div>
+    <section className={styled.favoritesSection}>
+      <Dropdown />
       <FavoritesCar />
-    </div>
+    </section>
   );
 };
