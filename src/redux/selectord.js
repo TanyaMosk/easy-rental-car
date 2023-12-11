@@ -1,5 +1,3 @@
-// import { createSelector } from "@reduxjs/toolkit";
-
 export const advertsSelector = (state) => state.adverts;
 
 export const isLoadingSelector = (state) => state.adverts.isLoading;

@@ -1,9 +1,6 @@
 .dropdownContainer {
   display: flex;
   gap: 5px;
-  /* justify-content: center; */
-  /* gap: 18px; */
-  /* margin-bottom: 20px; */
   flex-wrap: wrap;
   justify-content: flex-start;
   margin-bottom: 10px;
@@ -24,7 +21,6 @@
 .carInputOne {
   display: flex;
   width: 60px;
-  /* width: 160px; */
   height: 48px;
   padding: 0 14px 0px 24px;
   align-items: center;
@@ -37,7 +33,6 @@
 .carInputTwo {
   display: flex;
   width: 60px;
-  /* width: 160px; */
   height: 48px;
   padding: 0 14px 0px 24px;
   align-items: center;
@@ -55,7 +50,6 @@
   border-radius: 12px;
   background-color: #3470ff;
   margin-top: 48px;
-  /* margin-top: 45px; */
   color: #fff;
   border: none;
 }

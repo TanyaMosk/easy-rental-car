@@ -1,12 +1,3 @@
-// import { configureStore } from "@reduxjs/toolkit";
-// import { advertsReduser } from "./advertsSlice";
-
-// export const store = configureStore({
-//   reducer: {
-//     adverts: advertsReduser,
-//   },
-// });
-
 import { configureStore } from "@reduxjs/toolkit";
 import { advertsReduser } from "./advertsSlice";
 import {
@@ -38,7 +29,7 @@ export const store = configureStore({
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
     }),
-  // devTools: process.env.NODE_ENV === "development",
+  devTools: process.env.NODE_ENV === "development",
 });
 
 export const persistor = persistStore(store);
