@@ -12,7 +12,6 @@ const advertsSlice = createSlice({
   reducers: {
     addToFavorites(state, action) {
       state.favorites = [...state.favorites, action.payload];
-      // state.favorites.push(action.payload);
     },
     removeFromFavorites: (state, action) => {
       const advertToRemoveId = action.payload;
@@ -24,7 +23,6 @@ const advertsSlice = createSlice({
       state.adverts = [];
     },
   },
-
   extraReducers: (builder) =>
     builder
       .addCase(fetchCars.pending, (state, action) => {
