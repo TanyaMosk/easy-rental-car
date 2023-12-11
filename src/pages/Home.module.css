@@ -12,25 +12,51 @@
   top: 0;
   left: 2%;
   margin: auto;
-  /* padding: 20px; */
-  /* display: flex; */
 }
 
 .titleHome {
-  width: 400px;
-  /* text-align: left; */
-  font-size: 74px;
+  width: 200px;
+  font-size: 44px;
   line-height: 150%;
   font-family: none;
   color: #fff;
-  margin: 0;
+  margin-top: 30px;
 }
 .welcomeText {
   color: lightskyblue;
-  width: 650px;
-  font-size: 20px;
+  width: 300px;
+  font-size: 14px;
 }
 
 .welcomeTextWrapper {
+  background-image: linear-gradient(
+    180deg,
+    #171a24 0%,
+    rgba(23, 26, 36, 0.2) 100%
+  );
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .titleHome {
+    width: 400px;
+    font-size: 66px;
+    margin-bottom: 80px;
+  }
+  .welcomeText {
+    width: 450px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .titleHome {
+    width: 400px;
+    font-size: 74px;
+    margin: 0;
+  }
+  .welcomeText {
+    width: 650px;
+    font-size: 24px;
+  }
 }

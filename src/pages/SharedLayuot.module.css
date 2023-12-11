@@ -12,27 +12,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-left: 60px;
-  margin-right: 60px;
 }
 
 .wrapperLink {
   display: flex;
-  gap: 40px;
+  gap: 10px;
 }
 
 .navLink {
   text-decoration: none;
-  padding: 10px;
+  padding: 5px;
   background-color: #3470ff;
   color: #fff;
   border-radius: 12px;
-
-  /* border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  border-radius: 5px;
-  padding: 5px 10px 10px 10px; */
 }
 
 .navLink:hover {
@@ -49,9 +41,25 @@
   text-transform: uppercase;
 }
 
-.nameLink:hover {
-  color: navy;
+@media screen and (min-width: 768px) {
+  .navigation {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  .wrapperLink {
+    gap: 40px;
+  }
+
+  .navLink {
+    padding: 10px;
+  }
 }
-.nameLink:focus {
-  color: navy;
+
+@media screen and (min-width: 1200px) {
+  .nameLink:hover {
+    color: navy;
+  }
+  .nameLink:focus {
+    color: navy;
+  }
 }
