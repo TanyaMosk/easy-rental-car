@@ -86,13 +86,14 @@ const Dropdown = () => {
               height: "48px",
               display: "flex",
               justifyContent: "center",
-              alignItems: "flex-start",
+              alignItems: "center",
               gap: "32px",
               borderRadius: "14px",
               background: "#f7f7fb",
               border: "none",
             }),
           }}
+          placeholder={"To"}
           options={optionsPrise}
         />
       </div>
