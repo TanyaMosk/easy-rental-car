@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/easy-rental-car/static/css/main.729b0fda.css",
-    "main.js": "/easy-rental-car/static/js/main.b475bdec.js",
+    "main.css": "/easy-rental-car/static/css/main.c52db5ae.css",
+    "main.js": "/easy-rental-car/static/js/main.bcbde322.js",
     "static/media/bg.jpg": "/easy-rental-car/static/media/bg.7c670ff049c27ab181a6.jpg",
     "index.html": "/easy-rental-car/index.html",
-    "main.729b0fda.css.map": "/easy-rental-car/static/css/main.729b0fda.css.map",
-    "main.b475bdec.js.map": "/easy-rental-car/static/js/main.b475bdec.js.map"
+    "main.c52db5ae.css.map": "/easy-rental-car/static/css/main.c52db5ae.css.map",
+    "main.bcbde322.js.map": "/easy-rental-car/static/js/main.bcbde322.js.map"
   },
   "entrypoints": [
-    "static/css/main.729b0fda.css",
-    "static/js/main.b475bdec.js"
+    "static/css/main.c52db5ae.css",
+    "static/js/main.bcbde322.js"
   ]
 }
