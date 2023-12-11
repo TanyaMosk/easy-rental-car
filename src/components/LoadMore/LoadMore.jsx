@@ -1,8 +1,8 @@
 // import { useSelector } from "react-redux";
-import styled from "./Pagination.module.css";
+import styled from "./LoadMore.module.css";
 // import { isLoadingSelector } from "../../redux/selectord";
 
-const Pagination = ({ loadMore }) => {
+const LoadMore = ({ loadMore }) => {
   // const { isLoading } = useSelector(isLoadingSelector);
 
   // console.log(isLoading);
@@ -21,4 +21,4 @@ const Pagination = ({ loadMore }) => {
   );
 };
 
-export default Pagination;
+export default LoadMore;

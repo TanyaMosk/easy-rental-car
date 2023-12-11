@@ -1,6 +1,6 @@
 .containerCarModalWrapper {
   width: 467px;
-  min-height: 672px;
+  /* min-height: 672px; */
   background-color: #fff;
 }
 
@@ -54,12 +54,14 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  margin: 0;
   /* margin: 0; */
 }
 .rentalItems {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  margin: 0;
 }
 .rentalItem {
   display: flex;
@@ -117,7 +119,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-  margin-top: 24px;
+  /* margin-top: 24px; */
   margin-bottom: 8px;
 }
 
@@ -130,6 +132,7 @@
   background: #3470ff;
   color: #ffffff;
   text-decoration: none;
+  margin-top: 24px;
 }
 
 .buttonRend:focus {

@@ -70,10 +70,15 @@ const FavoritesCar = () => {
               </div>
               <div className={styled.carsItemWrapper}>
                 <li className={styled.carsItem}>{advert.address}</li>
+                <li className={styled.carsItem}>|</li>
                 <li className={styled.carsItem}>{advert.rentalCompany}</li>
+                <li className={styled.carsItem}>|</li>
                 <li className={styled.carsItem}>{advert.type}</li>
+                <li className={styled.carsItem}>|</li>
                 <li className={styled.carsItem}>{advert.model}</li>
+                <li className={styled.carsItem}>|</li>
                 <li className={styled.carsItem}>{advert.id}</li>
+                <li className={styled.carsItem}>|</li>
                 <li className={styled.carsItem}>{advert.functionalities[0]}</li>
               </div>
               <button

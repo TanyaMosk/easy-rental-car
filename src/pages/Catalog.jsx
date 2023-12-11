@@ -1,7 +1,7 @@
 import { useSearchParams } from "react-router-dom";
 import CarCard from "../components/CarCard/CarCard";
 import { useSelector } from "react-redux";
-import Pagination from "../components/Pagination/Pagination";
+import LoadMore from "../components/LoadMore/LoadMore";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { fetchCars } from "../redux/operations";
@@ -42,7 +42,7 @@ export const Catalog = () => {
         ) : (
           <>
             <CarCard adverts={adverts} />
-            {adverts.length && <Pagination loadMore={handleLoadMore} />}
+            {adverts.length && <LoadMore loadMore={handleLoadMore} />}
           </>
         )}
       </section>

@@ -40,7 +40,10 @@
 .carsWrapper {
   display: flex;
   flex-wrap: wrap;
+  /* flex-direction: row; */
   gap: 50px 29px;
+  /* width: 274px; */
+  min-height: 426px;
   /* position: relative; */
 }
 
@@ -75,7 +78,9 @@
 }
 
 .carsItemWrapper {
-  /* display: flex; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 6px;
 }
 
 .carsItem {
