@@ -14,7 +14,6 @@ export const Catalog = () => {
   const { adverts } = useSelector(advertsSelector);
   const isLoading = useSelector(isLoadingSelector);
   const [searchParams, setSearchParams] = useSearchParams();
-  // const [currentPage, setCurrentPage] = useState(1);
   const page = searchParams.get("page") ?? 1;
 
   const dispatch = useDispatch();
@@ -30,7 +29,6 @@ export const Catalog = () => {
   const handleLoadMore = () => {
     const nextPage = Number(page) + 1;
     setSearchParams({ page: nextPage });
-    // setCurrentPage(nextPage);
   };
 
   return (

@@ -1,3 +1,13 @@
+.header {
+  background: radial-gradient(
+    circle at 85.4% 50.8%,
+    rgb(14, 72, 222) 0%,
+    rgb(3, 22, 65) 74.2%
+  );
+  padding: 10px;
+  margin: auto;
+}
+
 .navigation {
   display: flex;
   align-items: center;
@@ -9,15 +19,6 @@
 .wrapperLink {
   display: flex;
   gap: 40px;
-}
-.header {
-  background: radial-gradient(
-    circle at 85.4% 50.8%,
-    rgb(14, 72, 222) 0%,
-    rgb(3, 22, 65) 74.2%
-  );
-  padding: 10px;
-  /* position: relative; */
 }
 
 .navLink {

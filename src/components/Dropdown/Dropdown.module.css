@@ -1,6 +1,61 @@
 .dropdownContainer {
   display: flex;
   justify-content: center;
-  gap: 80px;
+  gap: 18px;
   margin-bottom: 20px;
+}
+
+.titleCar {
+  color: #8a8a89;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+}
+.carInputWrapper {
+  display: flex;
+}
+
+.carInputOne {
+  display: flex;
+  width: 160px;
+  height: 48px;
+  padding: 0 14px 0px 24px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 14px 0px 0px 14px;
+  border-right: 1px solid rgba(138, 138, 137, 0.2);
+  background-color: #f7f7fb;
+  border: none;
+}
+.carInputTwo {
+  display: flex;
+  width: 160px;
+  height: 48px;
+  padding: 0 14px 0px 24px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 0px 14px 14px 0px;
+  background-color: #f7f7fb;
+  border: none;
+}
+
+.dropdownButton {
+  display: flex;
+  padding: 14px 44px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background-color: #3470ff;
+  margin-top: 45px;
+  color: #fff;
+  border: none;
+}
+
+.dropdownButton:focus {
+  background-color: #0b44cd;
+}
+.dropdownButton:hover {
+  background-color: #0b44cd;
 }
