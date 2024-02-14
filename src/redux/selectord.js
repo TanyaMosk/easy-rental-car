@@ -5,3 +5,5 @@ export const isLoadingSelector = (state) => state.adverts.isLoading;
 export const errorSelector = (state) => state.error;
 
 export const favoritesSelector = (state) => state.adverts.favorites;
+
+export const filterSelector = (state) => state.adverts.filter;

@@ -1,8 +1,13 @@
 import Select from "react-select";
 import styled from "./Dropdown.module.css";
+import { addFilter, resetAdverts } from "../../redux/advertsSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { filterSelector } from "../../redux/selectord";
+import { fetchCars, fetchCarsFilter } from "../../redux/operations";
 
 const Dropdown = () => {
   const optionsCars = [
+    { value: "all cars", label: "all cars" },
     { value: "Aston Martin", label: "Aston Martin" },
     { value: "Audi", label: "Audi" },
     { value: "Bentley", label: "Bentley" },
@@ -53,9 +58,28 @@ const Dropdown = () => {
     { value: "450$", label: "450$" },
     { value: "500$", label: "500$" },
   ];
+  const filter = useSelector(filterSelector);
+
+  const dispatch = useDispatch();
+
+  const handleCheckCar = ({ label }) => {
+    if (label === "all cars") {
+      dispatch(resetAdverts());
+      dispatch(fetchCars());
+    }
+    console.log(label);
+    dispatch(addFilter(label));
+    dispatch(fetchCarsFilter(label));
+  };
+
+  const handleCheckPrice = ({ label }) => {
+    console.log(label);
+    dispatch(addFilter(label));
+  };
 
   return (
     <div className={styled.dropdownContainer}>
+      {/* <form> */}
       <div>
         <p className={styled.titleCar}>Car brand</p>
         <Select
@@ -74,6 +98,7 @@ const Dropdown = () => {
             }),
           }}
           options={optionsCars}
+          onChange={handleCheckCar}
         />
       </div>
       <div>
@@ -95,8 +120,10 @@ const Dropdown = () => {
           }}
           placeholder={"To"}
           options={optionsPrise}
+          onChange={handleCheckPrice}
         />
       </div>
+      {/* <form> */}
       <div>
         <label>
           <p className={styled.titleCar}>Car mileage / km</p>
@@ -111,6 +138,7 @@ const Dropdown = () => {
           Search
         </button>
       </div>
+      {/* </form> */}
     </div>
   );
 };

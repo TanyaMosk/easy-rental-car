@@ -1,4 +1,4 @@
-.imageWrapper {  
+.imageWrapper {
   width: 270px;
   height: 200px;
   background-color: gainsboro;
@@ -8,7 +8,7 @@
 .image {
   width: 270px;
   height: 200px;
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 
 .favoritesButton {
@@ -23,10 +23,14 @@
 
 .heardActive {
   fill: #ffffff;
+  height: 1.3em;
+  width: 1.3em;
 }
 
 .heard {
   fill: #3470ff;
+  height: 1.2em;
+  width: 1.2em;
 }
 
 .carsCatalog {
@@ -37,7 +41,7 @@
 .carsWrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 50px 29px;  
+  gap: 50px 29px;
   min-height: 426px;
 }
 

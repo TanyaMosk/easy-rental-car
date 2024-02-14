@@ -1,7 +1,7 @@
-import bg from "../image/bg.jpg";
+import bg from "../../image/bg.jpg";
 import styled from "./Home.module.css";
 
-export const Home = () => {
+const Home = () => {
   return (
     <div className={styled.homeContainer}>
       <img className={styled.imageHome} src={bg} alt="Rental car" />
@@ -33,3 +33,5 @@ export const Home = () => {
     </div>
   );
 };
+
+export default Home;

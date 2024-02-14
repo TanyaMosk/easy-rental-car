@@ -1,12 +1,15 @@
 import { Route, Routes, Navigate } from "react-router-dom";
 import "./App.css";
-import { Home } from "./pages/Home.jsx";
-import { Catalog } from "./pages/Catalog.jsx";
-import { Favorites } from "./pages/Favorites.jsx";
-import SharedLayout from "./pages/SharedLayout.jsx";
+import { lazy } from "react";
 
-function App() {  
+const Home = lazy(() => import("./pages/Home/Home.jsx"));
+const Catalog = lazy(() => import("./pages/Catalog/Catalog.jsx"));
+const Favorites = lazy(() => import("./pages/Favorites/Favorites.jsx"));
+const SharedLayout = lazy(() =>
+  import("./pages/SharedLayuot/SharedLayout.jsx")
+);
 
+function App() {
   return (
     <>
       <Routes>
