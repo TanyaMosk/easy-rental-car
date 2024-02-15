@@ -11,7 +11,10 @@ import {
   filterSelector,
   isLoadingSelector,
 } from "../../redux/selectord";
-import { addFilter, resetAdverts } from "../../redux/advertsSlice";
+import {
+  // addFilter,
+  resetAdverts,
+} from "../../redux/advertsSlice";
 import Dropdown from "../../components/Dropdown/Dropdown";
 
 const Catalog = () => {

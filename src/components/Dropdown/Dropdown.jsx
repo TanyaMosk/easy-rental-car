@@ -1,8 +1,11 @@
 import Select from "react-select";
 import styled from "./Dropdown.module.css";
 import { addFilter, resetAdverts } from "../../redux/advertsSlice";
-import { useDispatch, useSelector } from "react-redux";
-import { filterSelector } from "../../redux/selectord";
+import {
+  useDispatch,
+  // useSelector
+} from "react-redux";
+// import { filterSelector } from "../../redux/selectord";
 import { fetchCars, fetchCarsFilter } from "../../redux/operations";
 
 const Dropdown = () => {
@@ -58,7 +61,7 @@ const Dropdown = () => {
     { value: "450$", label: "450$" },
     { value: "500$", label: "500$" },
   ];
-  const filter = useSelector(filterSelector);
+  // const filter = useSelector(filterSelector);
 
   const dispatch = useDispatch();
 
