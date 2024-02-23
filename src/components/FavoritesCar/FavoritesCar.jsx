@@ -2,16 +2,13 @@ import { useDispatch, useSelector } from "react-redux";
 import styled from "./FavoritesCar.module.css";
 import CarModal from "../CarModal/CarModal";
 import { useState } from "react";
-import {
-  favoritesSelector,
-  // filterSelector
-} from "../../redux/selectord";
+import { favoritesSelector, filterSelector } from "../../redux/selectord";
 import { addToFavorites, removeFromFavorites } from "../../redux/advertsSlice";
 import { IoMdHeart } from "react-icons/io";
 
 const FavoritesCar = () => {
   const favorites = useSelector(favoritesSelector);
-  // const filter = useSelector(filterSelector);
+  const filter = useSelector(filterSelector);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedAdvert, setSelectedAdvert] = useState({});
   const dispatch = useDispatch();
@@ -37,11 +34,15 @@ const FavoritesCar = () => {
     }
   };
 
+  const visibilAdverts = favorites.filter((advert) => advert.make === filter);
+  const showFavorites =
+    filter === "" || filter === "all cars" ? favorites : visibilAdverts;
+
   return (
     <>
       <div className={styled.carsCatalog}>
         <div className={styled.carsWrapper}>
-          {favorites.map((advert) => (
+          {showFavorites.map((advert) => (
             <ul key={advert.id} className={styled.carsList}>
               <button
                 className={styled.favoritesButton}

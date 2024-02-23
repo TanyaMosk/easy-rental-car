@@ -78,7 +78,7 @@
 .carsItemWrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px 6px;
+  gap: 4px 7px;
 }
 
 .carsItem {
